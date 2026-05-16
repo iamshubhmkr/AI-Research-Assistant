@@ -1,0 +1,34 @@
+# Core LLM & Orchestration
+anthropic>=0.34.0
+langchain>=0.3.0
+langchain-anthropic>=0.2.0
+langchain-aws>=0.2.0
+langgraph>=0.2.0
+langgraph-checkpoint-postgres>=1.0.0
+pydantic-settings>=2.4.0
+
+# RAG & Embeddings
+chromadb>=0.5.0
+sentence-transformers>=3.0.0
+pymupdf4llm>=0.0.17
+rank-bm25>=0.2.2
+ragas>=0.1.21
+datasets>=2.21.0
+
+# Caching & Persistence
+redis>=5.0.0
+psycopg2-binary>=2.9.9
+boto3>=1.35.0
+aiohttp>=3.10.0
+
+# API & UI
+fastapi>=0.115.0
+uvicorn>=0.30.0
+streamlit>=1.38.0
+
+# Monitoring
+langsmith>=0.1.120
+
+# Testing
+pytest>=8.0.0
+requests>=2.31.0

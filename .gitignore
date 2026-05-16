@@ -1,0 +1,27 @@
+# Environment — never commit secrets
+.env
+.env.local
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Local data (ChromaDB, semantic cache — large & machine-specific)
+data/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# macOS
+.DS_Store
+
+# Test cache
+.pytest_cache/
+.coverage
