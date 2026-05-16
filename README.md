@@ -1,4 +1,4 @@
-# AI Research Assistant — Production-Grade Multi-Agent Pipeline v2
+# AI Research Assistant — Production-Grade Multi-Agent Pipeline 
 
 > LangGraph · Claude Sonnet 4.5 · AWS Bedrock · RAGAS · Redis · ChromaDB · RAPTOR · HyDE
 
