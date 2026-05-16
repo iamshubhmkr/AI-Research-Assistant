@@ -4,17 +4,6 @@
 
 A multi-agent research pipeline that fetches academic papers from arXiv, extracts and indexes them hierarchically (RAPTOR), retrieves with hybrid dense+sparse+reranking, synthesizes using CoT/ToT/Reflexion, and fact-checks with RAGAS — with human-in-the-loop checkpoints, 4-layer caching, and full token tracking.
 
-## v2 Improvements
-- **LLM Client Abstraction**: Seamless switch between Anthropic API and AWS Bedrock
-- **Token Tracking**: Per-agent token usage and cost reporting via `llm_client.py`
-- **Vectorless RAG**: Optional LLM-based retrieval without vector DB dependency
-- **Level 0 Chunking Integration**: Semantic chunker properly feeds RAPTOR leaves
-- **MCP Server Stub**: Reference arXiv MCP server implementation
-- **Full Test Suite**: Unit, integration, RAGAS regression, and smoke tests
-- **RAGAS CLI**: `python -m evaluation.ragas_eval --quick` for smoke tests
-- **Token Budget Controls**: Hard caps on input tokens and paper truncation
-
----
 
 ## Complete Setup Guide (From Zero to Running)
 
