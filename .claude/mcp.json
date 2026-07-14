@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "arxiv": {
+      "command": "python",
+      "args": ["-m", "mcp.arxiv_server"],
+      "description": "arXiv search + document fetch tools used by the Fetcher agent"
+    }
+  }
+}

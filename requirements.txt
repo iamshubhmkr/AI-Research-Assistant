@@ -1,0 +1,43 @@
+# Core LLM & orchestration
+# NOTE: ragas needs the langchain 0.3.x ecosystem -> pin langgraph to 0.x
+anthropic>=0.34.0            # opt-in fallback provider only
+langgraph>=0.2.0,<1
+langgraph-checkpoint-postgres>=2.0.0,<3
+langchain-core>=0.3.0,<1
+langchain-aws>=0.2.0,<1      # Bedrock judge for RAGAS offline evaluation
+pydantic-settings>=2.4.0
+
+# RAG (embeddings via Bedrock Titan — no local torch models)
+chromadb>=0.5.0
+pymupdf>=1.24.0
+pymupdf4llm>=0.0.17
+rank-bm25>=0.2.2
+numpy>=1.26.0
+ragas>=0.1.21                # offline evaluation harness only
+datasets>=2.21.0
+
+# Optional local reranker (config.enable_cross_encoder):
+# sentence-transformers>=3.0.0
+
+# Document router (v3)
+python-docx>=1.1.0
+trafilatura>=1.12.0
+pandas>=2.2.0
+tabulate>=0.9.0
+
+# Caching & persistence
+redis>=5.0.0
+psycopg[binary,pool]>=3.1.0
+boto3>=1.35.0
+aiohttp>=3.10.0
+
+# API & UI
+fastapi>=0.115.0
+uvicorn>=0.30.0
+streamlit>=1.38.0
+
+# Monitoring & testing
+langsmith>=0.1.120
+pytest>=8.0.0
+requests>=2.31.0
+ruff>=0.5.0

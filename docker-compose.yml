@@ -1,0 +1,17 @@
+services:
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+    volumes: [redis_data:/data]
+    command: redis-server --appendonly yes
+    healthcheck: {test: ["CMD", "redis-cli", "ping"], interval: 10s, timeout: 3s, retries: 3}
+  postgres:
+    image: postgres:16-alpine
+    # 5433 on the host: many dev machines run a local Postgres on 5432
+    ports: ["5433:5432"]
+    environment: {POSTGRES_USER: user, POSTGRES_PASSWORD: pass, POSTGRES_DB: research_db}
+    volumes: [postgres_data:/var/lib/postgresql/data]
+    healthcheck: {test: ["CMD-SHELL", "pg_isready -U user -d research_db"], interval: 10s, timeout: 3s, retries: 3}
+volumes:
+  redis_data:
+  postgres_data:
